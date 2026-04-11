@@ -24,9 +24,9 @@ namespace WPF
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+			//btnButton.Content = btnButton.Content == "Stop"? "Кнопка" : "Stop";
             (sender as Button).Content = (sender as Button).Content == "Stop" ? "Start" : "Stop";
         }
     }
