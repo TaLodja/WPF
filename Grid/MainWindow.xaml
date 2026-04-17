@@ -5,15 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Grid"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#323232">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48"/>
-            <RowDefinition />
-            <RowDefinition Height="24"/>
-        </Grid.RowDefinitions>
+        Title="WPF Grid" Height="450" Width="800">
+	<Grid Background="#323232">
+		<!--<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="149*"/>
+			<ColumnDefinition Width="651*"/>
+		</Grid.ColumnDefinitions>-->
+		<Grid.RowDefinitions>
+			<RowDefinition Height="48"/>
+			<RowDefinition />
+			<RowDefinition Height="24"/>
+		</Grid.RowDefinitions>
 
-        <!--<Grid.ColumnDefinitions>
+		<!--<Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition />
@@ -23,17 +27,18 @@
         <Rectangle Fill="Green" Grid.Row="1" Grid.Column="1" />
         <Rectangle Fill="Blue" Grid.Row="2" Grid.Column="2" />-->
 
-        <Rectangle Fill="Gray"></Rectangle>
-        <Rectangle Fill="Gray" Grid.Row="2"></Rectangle>
-        
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Rectangle Fill="Green" />
-            <Rectangle Fill="Blue" Grid.Column="2" />
-        </Grid>
-    </Grid>
+		<!--<Rectangle Fill="Gray" Grid.ColumnSpan="2"></Rectangle>
+		<Rectangle Fill="Gray" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,362,0,0" Grid.RowSpan="2"></Rectangle>-->
+
+		<Grid Grid.Row="1" Grid.ColumnSpan="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.25*"/>
+				<ColumnDefinition Width=".5*"/>
+				<ColumnDefinition Width="0.25*"/>
+			</Grid.ColumnDefinitions>
+			<Rectangle Fill="Green" />
+			<Rectangle Fill="Blue" Grid.Column="2" />
+		</Grid>
+		<Rectangle Grid.Row="0" Fill="DarkBlue" />
+	</Grid>
 </Window>
