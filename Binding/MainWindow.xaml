@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Binding"
         mc:Ignorable="d"
-        Title="WPF Binding" Width="300" Height="400">
+        Title="WPF Binding" Width="300" Height="400"
+		FontSize="16"
+		>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />

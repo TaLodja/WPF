@@ -18,34 +18,41 @@ using System.Runtime.CompilerServices;
 
 namespace Binding
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window, INotifyPropertyChanged
-    {
-        string boundText;
-        public string BoundText
-        {
-            get => boundText;
-            set
-            {
-                boundText = value;
-                OnPropertyChanged();
-            }
-        }
-        public event PropertyChangedEventHandler PropertyChanged;
-        public MainWindow()
-        {
-            DataContext = this;
-            InitializeComponent();
-        }
-        void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        private void btnSet_Click(object sender, RoutedEventArgs e)
-        {
-            BoundText = "Default";
-        }
-    }
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
+	public partial class MainWindow : Window, INotifyPropertyChanged
+	{
+		string boundText;
+		public string BoundText
+		{
+			get => boundText;
+			set
+			{
+				boundText = value;
+				OnPropertyChanged();
+				//OnPropertyChanged(nameof(BoundText));
+			}
+		}
+		public event PropertyChangedEventHandler PropertyChanged;
+		public MainWindow()
+		{
+			DataContext = this;
+			InitializeComponent();
+			txtInput.Focus();
+		}
+		void OnPropertyChanged([CallerMemberName] string propertyName = null)
+		//void OnPropertyChanged(string propertyName)
+		{
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+			//PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
+		}
+		private void btnSet_Click(object sender, RoutedEventArgs e)
+		{
+			BoundText = "Default";
+			//if (!string.IsNullOrEmpty(txtInput.Text))
+			//	tbResult.Text = txtInput.Text;
+		}
+	}
 }

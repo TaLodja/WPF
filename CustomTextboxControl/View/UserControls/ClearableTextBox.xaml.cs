@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,12 +39,25 @@ namespace CustomTextboxControl.View.UserControls
 		{
 			tbPlaceholder.Visibility = txtInput.Text == "" ? Visibility.Visible : Visibility.Hidden;
 			//if (txtInput.Text.Length > 16) Window.GetWindow(this).Focus();
-			//if (txtInput.Text.Length > 16) txtInput.Text = txtInput.Text.Substring(0, 16);
+			if (txtInput.Text.Length > 16)
+			{
+				txtInput.Text = txtInput.Text.Substring(0, 16);
+				txtInput.Select(txtInput.Text.Length, 0);
+			}
         }
 
 		private void btnClear_Click(object sender, RoutedEventArgs e)
 		{
 			txtInput.Text = "";
+		}
+
+		private void txtInput_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.Key == Key.Enter)
+			{
+				TraversalRequest tr = new TraversalRequest(FocusNavigationDirection.Down);
+				(sender as Control).MoveFocus(tr);
+			}
 		}
 	}
 }
