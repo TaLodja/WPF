@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="IP_adressPresentation.View.UserControls.Bit1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IP_adressPresentation.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="35" d:DesignWidth="35">
+    <Grid>
+		<TextBox Text="1" FontSize="24" FontWeight="Heavy" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="Transparent" BorderThickness="0" />
+	</Grid>
+</UserControl>

@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="IP_adressPresentation.View.UserControls.ClassByte"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IP_adressPresentation.View.UserControls"
+			 xmlns:userControls="clr-namespace:IP_adressPresentation.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="140" d:DesignWidth="280">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<TextBox Grid.Row="1" Grid.ColumnSpan="8" Text="0" FontSize="24" FontWeight="Heavy" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="Transparent" BorderThickness="0" />
+		<TextBox Grid.Row="3" Grid.ColumnSpan="8" Text="255" FontSize="24" FontWeight="Heavy" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="Transparent" BorderThickness="0" />
+		<userControls:Bit0 Grid.Row="0" Grid.Column="0"/>
+		<userControls:Bit0 Grid.Row="0" Grid.Column="1"/>
+		<userControls:Bit0 Grid.Row="0" Grid.Column="2"/>
+		<userControls:Bit0 Grid.Row="0" Grid.Column="3"/>
+		<userControls:Bit0 Grid.Row="0" Grid.Column="4"/>
+		<userControls:Bit0 Grid.Row="0" Grid.Column="5"/>
+		<userControls:Bit0 Grid.Row="0" Grid.Column="6"/>
+		<userControls:Bit0 Grid.Row="0" Grid.Column="7"/>
+		<userControls:Bit1 Grid.Row="2" Grid.Column="0"/>
+		<userControls:Bit1 Grid.Row="2" Grid.Column="1"/>
+		<userControls:Bit1 Grid.Row="2" Grid.Column="2"/>
+		<userControls:Bit1 Grid.Row="2" Grid.Column="3"/>
+		<userControls:Bit1 Grid.Row="2" Grid.Column="4"/>
+		<userControls:Bit1 Grid.Row="2" Grid.Column="5"/>
+		<userControls:Bit1 Grid.Row="2" Grid.Column="6"/>
+		<userControls:Bit1 Grid.Row="2" Grid.Column="7"/>
+	</Grid>
+</UserControl>
